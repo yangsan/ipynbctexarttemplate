@@ -26,8 +26,29 @@
 \author{}
 ((* endblock author *))
 
+((* block maketitle *))
+    \makeatletter
+        \begin{titlepage}
+
+        \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+        \raggedleft
+        \vspace*{\baselineskip}
+        {\Large \@author} \\ [0.2\textheight]
+        \HRule{0.5mm} \\ [0.5cm]
+        {\Huge \@title} \\ [0.4cm]
+        \HRule{0.3mm} \\
+
+        \vfill
+
+        {\large \@date}
+
+        \vspace*{3\baselineskip}
+
+    \end{titlepage}
+((* endblock maketitle *))
+
 ((* block abstract *))
-% 设置目录
 \tableofcontents
 \newpage
 ((* endblock abstract *))
