@@ -1,0 +1,33 @@
+% Default to the notebook output style
+((* if not cell_style is defined *))
+    ((* set cell_style = 'style_ipython.tplx' *))
+((* endif *))
+
+% Inherit from the specified cell style.
+((* extends cell_style *))
+
+
+%===============================================================================
+% Latex Article
+%===============================================================================
+
+((* block docclass *))
+\documentclass[nofonts,no-math,fancyhdr,hyperref,UTF8]{ctexart}
+% 根据你系统中安装的字体进行设置，我使用的是Mac
+\setCJKmainfont[ItalicFont={Songti SC}, BoldFont={Heiti SC}]{Hiragino Sans GB} 
+% \setCJKmonofont{} % 中文等宽字体
+% \setmainfont{} % 英文衬线字体
+% \setmonofont{} % 英文等宽字体
+% \setsansfont{} % 英文无衬线字体
+((* endblock docclass *))
+
+((* block author *))
+% 设置作者名
+\author{}
+((* endblock author *))
+
+((* block abstract *))
+% 设置目录
+\tableofcontents
+\newpage
+((* endblock abstract *))
